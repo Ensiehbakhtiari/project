@@ -19,5 +19,18 @@ import main.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/',main.views.indexview),
+    path('index/', main.views.indexview),
+    path('singup/', main.views.singupview),
+    path('courses/',main.views.coursesview), 
+    path('coursesinfo/',main.views.coursesinfoview), 
+    path('meetings/',main.views.meetingsview), 
+    path('blog/',main.views.blogview), 
+    path('news/',main.views.newsview), 
+    path('single/',main.views.singleview), 
+    path('gallerycat/',main.views.gallerycatview), 
+    path('gallery/',main.views.galleryview), 
+    path('about/',main.views.aboutview), 
+    path('contact/',main.views.contactview), 
+    path('faq/',main.views.faqview), 
+
 ]

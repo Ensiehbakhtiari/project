@@ -1,126 +1,13 @@
-<!DOCTYPE html>
-<html lang="fa">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سامانه مدیریت آموزش ضمن خدمت شهرداری کرج</title>
-    <link rel="stylesheet" href="assets/css/site.css">
-    <script data-main="assets/js/index.js" src="assets/libs/requirejs/require.js"></script>
-</head>
-
-<body id="showoption" class="theme-color-default">
-    <header>
-        <div class="header_topbar">
-            <div class="container-fluid">
-
-                <div class="header_topbar__client-area col-md-6 col-sm-6 col-xs-12 pull-right">
-                   <a class="button user-register color-main-bg" href="./singup.html">ثبت کاربر جدید <i class="fa fa-user"></i></a>
-                   <div class="user-login-box">
-                      <a class="button user-login" href="#">ورود کاربر <i class="fa fa-key"></i></a>
-                      <div class="login-form">
-                         <form action="">
-                            <input type="text" placeholder="نام کاربری">
-                            <input type="text" placeholder="کلمه عبور">
-                            <div class="button-sec">
-                               <button class="button btn--login" type="button" name="button">ورود</button>
-                               <button class="button" type="button" name="button"><i class="fa fa-home"></i></button>
-                            </div>
-                         </form>
-                      </div>
-                   </div>
-                </div>
-                <!-- header_topbar__client-area -->
-                <div class="header_topbar__search col-md-6 col-sm-6 col-xs-12 pull-left">
-                   <form action="">
-                      <input type="text" placeholder="در سایت جستجو کنید">
-                      <div class="btn-search"><i class="fa fa-search"></i></div>
-                   </form>
-                </div>
-                <!-- header_topbar__search -->
-            </div>
-        </div>
-        <div class="header_banner">
-            <img src="assets/images/header.png" alt=""/>
-            <div class="header_banner__content">
-                <div class="container-fluid">
-                    <div class="header__title col-md-5 col-sm-12 col-xs-12 pull-right">
-                       <h1>
-                          <a href="index.html">
-                             <span class="title-1">سامانه مدیریت آموزش ضمن خدمت شهرداری کرج</span>
-                             <span class="title-2 color-main-bg">Managment System Training Karaj Municipality</span>
-                          </a>
-                       </h1>
-                    </div>
-                    <div class="header__desc col-md-5 col-sm-12 col-xs-12 pull-left">
-                       <h2>
-                             <p>معاونت برنامه ریزی و توسعه سرمایه انسانی</p>
-                             <p>دفتر نوسازی و تحول اداری</p>
-                             <p>اداره آموزش </p>
-                       </h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header_navigation">
-            <nav class="navbar">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false">
-                            <span class="sr-only">منوی سایت</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <ul class="nav social-icon pull-left">
-                         <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                         <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                      </ul>
-                    </div>
-
-                    <div class="collapse navbar-collapse" id="navbarResponsive">
-                        <ul class="nav navbar-nav ">
-                            <li><a href="index.html">صفحه اصلی</a></li>
-                            <li><a href="#">خدمات آموزشی</a>
-                                <ul>
-                                   <li><a href="courses.html">لیست دوره ها</a></li>
-                                   <li><a href="courses-info.html">اطلاعات هر دوره</a></li>
-                                   <li><a href="meetings.html">جلسات</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="index.html">مقالات</a>
-                               <ul>
-                                  <li><a href="blog.html">وبلاگ</a></li>
-                                  <li><a href="#">اخبار</a>
-                                     <ul>
-                                      <li><a href="news.html">صفحه اخبار</a></li>
-                                      <li><a href="single.html">صفحه تک خبر</a></li>
-                                   </ul>
-                                  </li>
-                               </ul>
-                            </li>
-                            <li><a href="#">گالری تصاویر</a>
-                                <ul>
-                                   <li><a href="gallery-cat.html">لیست گالری ها</a></li>
-                                   <li><a href="gallery.html">صفحه گالری</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html">درباره ما</a></li>
-                            <li><a href="contact.html">تماس با ما</a></li>
-                            <li><a href="faq.html">سوالات متداول</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
+{% extends "layout.html" %}
+{% load static %}
+{% block difbody  %}
+        
         <div class="header_slider hidden-xs hidden-sm">
 
             <div class="parallax-slider themex-slider">
                 <div class="substrate">
-                    <img src="img/site_bg.jpg" class="fullwidth" alt=""/>
+                    <img src="{% static 'img/site_bg.jpg'%}" class="fullwidth" alt=""/>
                 </div>
                 <ul>
                     <li>
@@ -132,7 +19,7 @@
                                     <span class="button pull-left">ادامه مطلب</span>
                                 </a>
                             </div>
-                            <div class="sevencol column last"><img class="alignnone img-responsive" alt="" src="img/slide_1.png"/>
+                            <div class="sevencol column last"><img class="alignnone img-responsive" alt="" src="{% static 'img/slide_1.png'%}"/>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -147,7 +34,7 @@
                                 </a>
                             </div>
                             <div class="sevencol column last">
-                                <img src="img/slide_2.png" class="alignnone img-responsive" alt=""/>
+                                <img src="{% static 'img/slide_2.png' class="alignnone img-responsive" alt=""/>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -161,7 +48,7 @@
                                     <span class="button pull-left">ادامه مطلب</span>
                                 </a>
                             </div>
-                            <div class="sevencol column last"><img src="img/slide_3.png" class="alignnone img-responsive" alt=""/>
+                            <div class="sevencol column last"><img src="{% static 'img/slide_3.png'%}" class="alignnone img-responsive" alt=""/>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -176,14 +63,14 @@
             <!--end slider-->
 
             <!-- <div id="da-slider" class="da-slider">
-              <!-- <img class="fullwidth" src="assets/images/slider/site_bg.jpg" alt=""> --
+              <!-- <img class="fullwidth" src="{% static 'assets/images/slider/site_bg.jpg'%}" alt=""> --
                <div class="da-slide">
                   <div class="info">
                      <h2>نوشته تستی</h2>
                      <p>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است</p>
                      <a href="#" class="da-link color-main--bg">ادامه مطلب</a>
                   </div>
-                  <div class="da-img"><img src="assets/images/slider/slide_1.png" alt="" /></div>
+                  <div class="da-img"><img src="{% static 'assets/images/slider/slide_1.png'%}" alt="" /></div>
                </div>
                <div class="da-slide">
                   <div class="info">
@@ -191,7 +78,7 @@
                      <p>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است</p>
                      <a href="#" class="da-link color-main--bg">ادامه مطلب</a>
                   </div>
-                  <div class="da-img"><img src="assets/images/slider/slide_2.png" alt="" /></div>
+                  <div class="da-img"><img src="{% static 'assets/images/slider/slide_2.png'%}" alt="" /></div>
                </div>
                <nav class="da-arrows">
                   <span class="da-arrows-prev"></span>
@@ -199,6 +86,7 @@
                </nav>
 
          </div> -->
+
         </div>
         <!-- header_slider -->
 
@@ -404,7 +292,7 @@
                                <aside class="page_courses__item___content">
                                     <div class="content">
                                        <div class="photo">
-                                           <a href="#"><img src="assets/images/gallery/g1.jpg" alt=""></a>
+                                           <a href="#"><img src="{% static 'assets/images/gallery/g1.jpg'%}" alt=""></a>
                                        </div>
                                        <div class="text">
                                           <a href="#">
@@ -427,7 +315,7 @@
                                <aside class="page_courses__item___content">
                                     <div class="content">
                                        <div class="photo">
-                                           <a href="#"><img src="assets/images/gallery/g2.jpg" alt=""></a>
+                                           <a href="#"><img src="{% static 'assets/images/gallery/g2.jpg'%}" alt=""></a>
                                        </div>
                                        <div class="text">
                                           <a href="#">
@@ -450,7 +338,7 @@
                                <aside class="page_courses__item___content">
                                     <div class="content">
                                        <div class="photo">
-                                           <a href="#"><img src="assets/images/gallery/g3.jpg" alt=""></a>
+                                           <a href="#"><img src="{% static 'assets/images/gallery/g3.jpg'%}" alt=""></a>
                                        </div>
                                        <div class="text">
                                           <a href="#">
@@ -473,7 +361,7 @@
                                <aside class="page_courses__item___content">
                                     <div class="content">
                                        <div class="photo">
-                                           <a href="#"><img src="assets/images/gallery/g4.jpg" alt=""></a>
+                                           <a href="#"><img src="{% static 'assets/images/gallery/g4.jpg'%}" alt=""></a>
                                        </div>
                                        <div class="text">
                                           <a href="#">
@@ -496,7 +384,7 @@
                                <aside class="page_courses__item___content">
                                     <div class="content">
                                        <div class="photo">
-                                           <a href="#"><img src="assets/images/gallery/g5.jpg" alt=""></a>
+                                           <a href="#"><img src="{% static 'assets/images/gallery/g5.jpg'%}" alt=""></a>
                                        </div>
                                        <div class="text">
                                           <a href="#">
@@ -519,7 +407,7 @@
                                <aside class="page_courses__item___content">
                                     <div class="content">
                                        <div class="photo">
-                                           <a href="#"><img src="assets/images/gallery/g6.jpg" alt=""></a>
+                                           <a href="#"><img src="{% static 'assets/images/gallery/g6.jpg'%}" alt=""></a>
                                        </div>
                                        <div class="text">
                                           <a href="#">
@@ -545,7 +433,7 @@
                                <aside class="page_courses__item___content">
                                     <div class="content">
                                        <div class="photo">
-                                           <a href="#"><img src="assets/images/gallery/g1.jpg" alt=""></a>
+                                           <a href="#"><img src="{% static 'assets/images/gallery/g1.jpg'%}" alt=""></a>
                                        </div>
                                        <div class="text">
                                           <a href="#">
@@ -568,7 +456,7 @@
                                <aside class="page_courses__item___content">
                                     <div class="content">
                                        <div class="photo">
-                                           <a href="#"><img src="assets/images/gallery/g2.jpg" alt=""></a>
+                                           <a href="#"><img src="{% static 'assets/images/gallery/g2.jpg'%}" alt=""></a>
                                        </div>
                                        <div class="text">
                                           <a href="#">
@@ -591,7 +479,7 @@
                                <aside class="page_courses__item___content">
                                     <div class="content">
                                        <div class="photo">
-                                           <a href="#"><img src="assets/images/gallery/g3.jpg" alt=""></a>
+                                           <a href="#"><img src="{% static 'assets/images/gallery/g3.jpg'%}" alt=""></a>
                                        </div>
                                        <div class="text">
                                           <a href="#">
@@ -614,7 +502,7 @@
                                <aside class="page_courses__item___content">
                                     <div class="content">
                                        <div class="photo">
-                                           <a href="#"><img src="assets/images/gallery/g4.jpg" alt=""></a>
+                                           <a href="#"><img src="{% static 'assets/images/gallery/g4.jpg'%}" alt=""></a>
                                        </div>
                                        <div class="text">
                                           <a href="#">
@@ -637,7 +525,7 @@
                                <aside class="page_courses__item___content">
                                     <div class="content">
                                        <div class="photo">
-                                           <a href="#"><img src="assets/images/gallery/g5.jpg" alt=""></a>
+                                           <a href="#"><img src="{% static 'assets/images/gallery/g5.jpg'%}" alt=""></a>
                                        </div>
                                        <div class="text">
                                           <a href="#">
@@ -660,7 +548,7 @@
                                <aside class="page_courses__item___content">
                                     <div class="content">
                                        <div class="photo">
-                                           <a href="#"><img src="assets/images/gallery/g6.jpg" alt=""></a>
+                                           <a href="#"><img src="{% static 'assets/images/gallery/g6.jpg'%}" alt=""></a>
                                        </div>
                                        <div class="text">
                                           <a href="#">
@@ -700,8 +588,8 @@
                  <div class="item">
                     <div class="gallery_content">
                        <div class="gallery_item">
-                         <a class="colorbox" href="assets/images/gallery/g7.jpg">
-                            <img src="assets/images/gallery/g7.jpg" alt="">
+                         <a class="colorbox" href="{% static 'assets/images/gallery/g7.jpg'%}">
+                            <img src="{% static 'assets/images/gallery/g7.jpg'%}" alt="">
                          </a>
                       </div>
                     </div>
@@ -709,8 +597,8 @@
                  <div class="item">
                     <div class="gallery_content">
                        <div class="gallery_item">
-                          <a class="colorbox" href="assets/images/gallery/g8.jpg">
-                            <img src="assets/images/gallery/g8.jpg" alt="">
+                          <a class="colorbox" href="{% static 'assets/images/gallery/g8.jpg'%}">
+                            <img src="{% static 'assets/images/gallery/g8.jpg'%}" alt="">
                          </a>
                       </div>
                     </div>
@@ -718,8 +606,8 @@
                  <div class="item">
                     <div class="gallery_content">
                        <div class="gallery_item">
-                          <a class="colorbox" href="assets/images/gallery/g9.jpg">
-                            <img src="assets/images/gallery/g9.jpg" alt="">
+                          <a class="colorbox" href="{% static 'assets/images/gallery/g9.jpg'%}">
+                            <img src="{% static 'assets/images/gallery/g9.jpg'%}" alt="">
                          </a>
                       </div>
                     </div>
@@ -727,8 +615,8 @@
                  <div class="item">
                     <div class="gallery_content">
                        <div class="gallery_item">
-                          <a class="colorbox" href="assets/images/gallery/g8.jpg">
-                            <img src="assets/images/gallery/g8.jpg" alt="">
+                          <a class="colorbox" href="{% static 'assets/images/gallery/g8.jpg'%}">
+                            <img src="{% static 'assets/images/gallery/g8.jpg'%}" alt="">
                          </a>
                       </div>
                     </div>
@@ -736,8 +624,8 @@
                  <div class="item">
                     <div class="gallery_content">
                        <div class="gallery_item">
-                          <a class="colorbox" href="assets/images/gallery/g9.jpg">
-                            <img src="assets/images/gallery/g9.jpg" alt="">
+                          <a class="colorbox" href="{% static 'assets/images/gallery/g9.jpg'%}">
+                            <img src="{% static 'assets/images/gallery/g9.jpg'%}" alt="">
                          </a>
                       </div>
                     </div>
@@ -768,9 +656,9 @@
                 <aside class="box_news_content">
 
                     <div class="news_item col-md-12 pull-right">
-                        <a href="single.html">
+                        <a href={{"../single"}}>
                             <div class="news__photo col-md-3 col-sm-3 col-xs-12  pull-right">
-                                <img class="img-responsive" src="assets/images/gallery/g1.jpg" alt="">
+                                <img class="img-responsive" src="{% static 'assets/images/gallery/g1.jpg'%}" alt="">
                             </div>
                             <div class="news__text col-md-9 col-sm-9 pull-left">
                                 <h3 class="text_title">لورم ایپسوم متنی است که ساختگی برای</h3>
@@ -785,9 +673,9 @@
                     </div>
                     <!-- news_item -->
                     <div class="news_item col-md-12 pull-right">
-                        <a href="single.html">
+                        <a href={{"../single"}}>
                             <div class="news__photo col-md-3 col-sm-3 col-xs-12 pull-right">
-                                <img class="img-responsive" src="assets/images/gallery/g1.jpg" alt="">
+                                <img class="img-responsive" src="{% static 'assets/images/gallery/g1.jpg'%}" alt="">
                             </div>
                             <div class="news__text col-md-9 col-sm-9 col-xs-12 pull-left">
                                 <h3 class="text_title">لورم ایپسوم متنی است که ساختگی برای</h3>
@@ -802,9 +690,9 @@
                     </div>
                     <!-- news_item -->
                     <div class="news_item col-md-12 pull-right">
-                        <a href="single.html">
+                        <a href= {{"../single "}} >
                             <div class="news__photo col-md-3 col-sm-3 col-xs-12 pull-right">
-                                <img class="img-responsive" src="assets/images/gallery/g1.jpg" alt="">
+                                <img class="img-responsive" src="{% static 'assets/images/gallery/g1.jpg'%}" alt="">
                             </div>
                             <div class="news__text col-md-9 col-sm-9 col-xs-12 pull-left">
                                 <h3 class="text_title">لورم ایپسوم متنی است که ساختگی برای</h3>
@@ -845,12 +733,12 @@
                                 <ul class="list ads">
                                     <li>
                                         <a href="#">
-                                            <img src="assets/images/ads.png" alt="">
+                                            <img src="{% static 'assets/images/ads.png'%}" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img src="assets/images/ads2.png" alt="">
+                                            <img src="{% static 'assets/images/ads2.png'%}" alt="">
                                         </a>
                                     </li>
                                 </ul>
@@ -884,179 +772,8 @@
             </div>
         </div>
     </section>
+{% endblock %}
+
+    
 
 
-    <footer>
-        <div class="footer_base">
-            <div class="container">
-                <div class="row">
-
-                    <div class="footer_forms col-md-4 col-sm-12 col-xs-12 pull-right">
-                        <div class="footer_forms__content">
-                            <h6>
-                                <span class="icon">
-                                    <i class="fa fa-comments"></i>
-                                </span>
-                            </h6>
-                            <form action="">
-                                <input type="text" placeholder="نام">
-                                <input type="email" placeholder="ایمیل">
-                                <textarea name="name" rows="3" placeholder="متن ارسالی"></textarea>
-                                <button type="button" name="button">نظرمو اینجا ارسال می کنم</button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="footer_links col-md-4 col-sm-12 col-xs-12 pull-right">
-                        <div class="footer_links__content">
-                           <h6>نقل و قول دوستان</h6>
-                            <div id="comment" class="owl-carousel">
-                               <div class="item">
-                                  <p>
-                                     لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراح
-                                  </p>
-                               </div>
-                               <div class="item">
-                                  <p>
-                                     لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراح
-                                  </p>
-                               </div>
-                               <div class="item">
-                                  <p>
-                                     لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراح
-                                  </p>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="footer_links col-md-4 col-sm-12 col-xs-12 pull-left">
-                        <div class="footer_links__content">
-                            <h6>لینکستان</h6>
-                            <div class="list">
-                                <ul>
-                                    <li>
-                                        <a href="#">استانداری البرز</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">شهرداری کرج</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">سازمان شهرداری ها</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">فرم های آموزشی</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">فرم های آموزشی</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">شهرداری کرج</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">اداره کل آموزش و پرورش</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">شهرداری کرج</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">سازمان شهرداری ها</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">استانداری البرز</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a href="#">اداره کل آموزش و پرورش</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">شهرداری کرج</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">سازمان شهرداری ها</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">استانداری البرز</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">فرم های آموزشی</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">شهرداری کرج</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">استانداری البرز</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">شهرداری کرج</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">سازمان شهرداری ها</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="footer_copyright">
-            <p>نقل و نشر مطالب تنها با ذکر نام و لینک سایت اداره آموزش شهرداری کرج بلامانع است</p>
-            <p>طراحی سایت توسط آژانس تخصصی طراحی وب گیلاس</p>
-        </div>
-    </footer>
-
-
-    <div class="side-menu-hidden">
-       <div class="side-menu-hidden--content">
-          <ul class="menu">
-             <li><a href="#">
-                <i class="fa fa-certificate"></i>
-                <span>گواهینامه</span>
-             </a></li>
-             <li><a href="#">
-                <i class="fa fa-briefcase"></i>
-                <span>آموزش الکترونیک</span>
-             </a></li>
-             <li><a href="#">
-                <i class="fa fa-list-alt"></i>
-                <span>درخواست دوره</span>
-             </a></li>
-             <li><a href="#">
-                <i class="fa fa-cloud-download"></i>
-                <span>بخش دانلود</span>
-             </a></li>
-             <li><a href="#">
-                <i class="fa fa-calendar"></i>
-                <span>تقویم آموزشی</span>
-             </a></li>
-             <li><a href="#">
-                <i class="fa fa-file-text-o"></i>
-                <span>ثبت نام آنلاین</span>
-             </a></li>
-          </ul>
-          <ul id="ColorBox" class="colors">
-             <li class="theme-color-purple"></li>
-             <li class="theme-color-lightblue"></li>
-             <li class="theme-color-darkblue"></li>
-             <li class="theme-color-blue"></li>
-             <li class="theme-color-default"></li>
-             <li class="theme-color-red"></li>
-             <li class="theme-color-orange"></li>
-             <li class="theme-color-green"></li>
-          </ul>
-          <div class="side-menu-button">
-             <div class="side-menu-button--content">
-                <i class="fa fa-cog" aria-hidden="true"></i>
-             </div>
-          </div>
-       </div>
-    </div>
-
-
-</body>
-
-</html>
