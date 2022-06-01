@@ -4,7 +4,7 @@
  {% block difbody  %}
  
         <div class="header_cover">
-            <img src="{% static 'assets/images/slider/site_bg.jpg'%}" alt="">
+            <img src="{% static 'assets/images/slider/site_bg.jpg'%}" alt="" >
             <div class="container-fluid">
                 <div class="header_cover__box col-md-2 col-sm-3 col-xs-12">
                     <div class="box--default margin-bottom ">
@@ -12,16 +12,13 @@
                         <div class="box_content">
                             <ul class="list2">
                                 <li>
-                                    کد دوره : <span class="val">PR3425</span>
+                                    کد دوره : <span class="val">{{coursedetail.id}}</span>
                                 </li>
                                 <li>
-                                    نام استاد : <span class="val">حمید مظفری</span>
+                                    نام استاد : <span class="val">{{coursedetail.teacher}} </span>
                                 </li>
                                 <li>
-                                    مدت آموزش : <span class="val">۴۵ ساعت</span>
-                                </li>
-                                <li>
-                                    محل برگزاری : <span class="val">باشگاه میلاد شهرداری کرج</span>
+                                    مدت آموزش : <span class="val">{{coursedetail.timeperiod}} ساعت</span>
                                 </li>
                             </ul>
                         </div>
@@ -32,11 +29,8 @@
                         <h3 class="box_title text-right">توضیحات دوره</h3>
                         <div class="box_content ">
                             <div class="text">
-                                <h3 class="header_cover--title">سلسله مباحث شناخت زلزله</h3>
-                                <p>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی
-                                    و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی
-                                    است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد
-                                    است.</p>
+                                <h3 class="header_cover--title">{{coursedetail.name}}</h3>
+                                <p> {{coursedetail.explane}}</p>
                                 <a href="#" class="btn btn-default btn-lg pull-left">ثبت نام کنید</a>
                                 <div class="clearfix"></div>
                             </div>
@@ -51,7 +45,9 @@
                                 <div class="photo">
                                    <img class="img-responsive" src="{% static 'assets/images/gallery/g1.jpg'%}" alt="">
                                 </div>
-                                <h3>سلسله مباحث شناخت زلزله</h3>
+                                <h3>
+                                    {{coursedetail.name}}
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -62,10 +58,10 @@
     </header>
 
 
-    <section class="page_content">
+    {% comment %} <section class="page_content">
         <div class="container">
            <div id="courses-row" class="owl-carousel">
-
+                
                <div class="item">
                    <div class="page_courses__item">
                       <aside class="page_courses__item___content">
@@ -194,7 +190,7 @@
 
            </div>
         </div>
-    </section>
+    </section> {% endcomment %}
     {% endblock %}
 
  

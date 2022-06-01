@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.shortcuts import render
 from main.models import course
 # Create your views here.
@@ -19,8 +20,13 @@ def coursesview(request):
     return render(request, 'courses.html', context)
 
 
-def coursesinfoview(request):
-    return render(request, 'courses-info.html', context={})
+def coursesinfoview(request,cource_id):
+    cours=course.objects.get(pk=cource_id)
+    context={ 
+         "coursedetail":cours
+         }
+
+    return render(request, 'courses-info.html', context)
     
 def meetingsview(request):
     return render(request, 'meetings.html', context={})

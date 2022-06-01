@@ -36,10 +36,12 @@ class course(models.Model):
         blank=True, null=True, verbose_name="زمان شروع دوره")
     timeperiod = models.IntegerField(
         verbose_name="مدت آموزش (ساعت)", null=True)
-    teacher = models.ForeignKey(teachers, verbose_name=("استاد"),on_delete=models.CASCADE,null=True)
-    poster=models.ImageField(upload_to="courseimage/",null=True,verbose_name="پوستر")
+    teacher = models.ForeignKey(teachers, verbose_name=(
+        "استاد"), on_delete=models.CASCADE, null=True)
+    poster = models.ImageField(
+        upload_to="courseimage/", null=True, verbose_name="پوستر")
 
     explane = models.TextField(max_length=40000)
 
     def __str__(self):
-        return f"name:{self.name} "
+        return f"name:{self.name} ,timeperiod:{self.timeperiod},teacher:{self.teacher}, explane:{self.explane}"
