@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from main.models import course
 # Create your views here.
 
 
@@ -11,7 +11,12 @@ def singupview(request):
     return render(request, 'singup.html', context={})
 
 def coursesview(request):
-    return render(request, 'courses.html', context={})
+    courses=course.objects.all()
+    context={ 
+        "courselist":courses
+  
+    }
+    return render(request, 'courses.html', context)
 
 
 def coursesinfoview(request):

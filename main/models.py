@@ -1,36 +1,45 @@
+from unicodedata import name
 from django.db import models
 
 # Create your models here.
-class teachers(models.Model):       
-    name= models.CharField(max_length=200)
+
+
+class teachers(models.Model):
+    class Meta:
+        verbose_name = "استاد"
+        verbose_name_plural = "استاد"
+    name = models.CharField(max_length=200, verbose_name="نام")
+
     def __str__(self):
-     pass
-
-
+        return self.name
 
 
 class lesson(models.Model):
-    name=models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name = "درس"
+        verbose_name_plural = "درس"
+
+    name = models.CharField(max_length=100, verbose_name="نام")
 
     def __str__(self):
-        pass
-   
-
-
-
+        return self.name
 
 
 class course(models.Model):
-    name= models.CharField(max_length=200)
-    date=models.DateField()
-    classtime=models.TimeField()
-    teacher=models.ManyToManyField(teachers)
-    # student=models.ManyToManyField("students",on_delete=CASCADE)
- 
-    explane=models.TextField(max_length=40000)
+    class Meta:
+        verbose_name = "دوره"
+        verbose_name_plural = "دوره"
+
+    name = models.CharField(max_length=200, verbose_name="نام")
+    startdatetime = models.DateTimeField(
+        blank=True, null=True, verbose_name="زمان شروع دوره")
+    timeperiod = models.IntegerField(
+        verbose_name="مدت آموزش (ساعت)", null=True)
+    teacher = models.ForeignKey(teachers, verbose_name=("استاد"),on_delete=models.CASCADE,null=True)
+    poster=models.ImageField(upload_to="courseimage/",null=True,verbose_name="پوستر")
+
+    explane = models.TextField(max_length=40000)
+
     def __str__(self):
-        pass
-
-
-
-
+        return f"name:{self.name} "
