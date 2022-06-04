@@ -1,0 +1,58 @@
+{% load static %}
+
+<div class="col-md-6">
+
+<form action="" method="POST" class="form">
+    {% csrf_token %}
+    <h3>اطلاعات کاربری خود را وارد نمایید</h2>
+    <p >{{username}}{{errorMessage}}  </p>  
+    <label class="lable-control">نام کاربری:</label>
+    <input type="text" id="username" name="username" placeholder="نام کاربری خود را وارد نمایید" class="form-control">
+    <label class="lable-control">رمز عبور :</label>
+    <input type="password" id="password" name="password" placeholder="رمز عبور  خود را وارد نمایید" class="form-control">
+
+    <input type="submit" value="ورود" class="btn btn-success">
+</form> 
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}  {% endcomment %}
+
+{% comment %} <div class="login-form">
+  <form action="" method="post">
+    <input type="text" id="username" name="username" placeholder="نام کاربری" />
+    <input type="text" id="password" name="password" placeholder="کلمه عبور" />
+    <!-- <input type="submit" value="ورود >" -->
+    <div class="button-sec">
+      <button class="button btn--login" type="button" name="button">
+        ورود
+      </button>
+      <button class="button" type="button" name="button">
+        <i class="fa fa-home"></i>
+      </button>
+    </div>
+  </form>
+</div> {% endcomment %}

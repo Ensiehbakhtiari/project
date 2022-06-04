@@ -19,25 +19,18 @@
                 <div class="header_topbar__client-area col-md-6 col-sm-6 col-xs-12 pull-right">
                    <a class="button user-register color-main-bg" href={{"../singup"}}>ثبت کاربر جدید <i class="fa fa-user"></i></a>
                    <div class="user-login-box">
-                      <a class="button user-login" href="#">ورود کاربر <i class="fa fa-key"></i></a>
-                      <div class="login-form">
-                         <form action="">
-                            <input type="text" placeholder="نام کاربری">
-                            <input type="text" placeholder="کلمه عبور">
-                            <div class="button-sec">
-                               <button class="button btn--login" type="button" name="button">ورود</button>
-                               <button class="button" type="button" name="button"><i class="fa fa-home"></i></button>
-                            </div>
-                         </form>
-                      </div>
+                      <a class="button user-login" href={{"../login"}}>ورود کاربر <i class="fa fa-key"></i></a>
+                      <!-- <a class="button user-login" href="#">خروج <i class="fa fa-key"></i></a> -->
                    </div>
                 </div>
                 <!-- header_topbar__client-area -->
-                <div class="header_topbar__search col-md-6 col-sm-6 col-xs-12 pull-left">
-                   <form action="">
-                      <input type="text" placeholder="در سایت جستجو کنید">
-                      <div class="btn-search"><i class="fa fa-search"></i></div>
-                   </form>
+                <div class="header_topbar__search col-md-6 col-sm-6 col-xs-12 pull-left" aria-controls="white">
+                    <p>{{username}}  {{massage}}  </p>   
+  
+                   <!-- <form action=""> -->
+                      <!-- <input type="text" placeholder="در سایت جستجو کنید"> -->
+                      <!-- <div class="btn-search"><i class="fa fa-search"></i></div> -->
+                   <!-- </form> -->
                 </div>
                 <!-- header_topbar__search -->
             </div>
@@ -132,11 +125,13 @@
                                     <i class="fa fa-comments"></i>
                                 </span>
                             </h6>
-                            <form action="">
-                                <input type="text" placeholder="نام">
-                                <input type="email" placeholder="ایمیل">
-                                <textarea name="name" rows="3" placeholder="متن ارسالی"></textarea>
-                                <button type="button" name="button">نظرمو اینجا ارسال می کنم</button>
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                <input type="text" placeholder="نام" name="namecomm">
+                                <input type="email" placeholder="ایمیل" name="ecomm">
+                                <textarea name="name" rows="3" placeholder="متن ارسالی" name="textcomm"></textarea>
+                                <input type="submit" value="نظرمو اینجا ارسال می کنم" class="btn btn-success">
+                                <!-- <button type="button" name="button">نظرمو اینجا ارسال می کنم</button> -->
                             </form>
                         </div>
                     </div>
@@ -146,6 +141,12 @@
                            <h6>نقل و قول دوستان</h6>
                             <div id="comment" class="owl-carousel">
                                <div class="item">
+                                    {% for comment in comments %}   
+                                    <p>{{comment}}</p>
+                                    {% endfor %}
+                                 <p></p> 
+                               </div>
+                               <!-- <div class="item">
                                   <p>
                                      لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراح
                                   </p>
@@ -154,12 +155,7 @@
                                   <p>
                                      لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراح
                                   </p>
-                               </div>
-                               <div class="item">
-                                  <p>
-                                     لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.لورم ایپسوم متنی است که ساختگی برای طراح
-                                  </p>
-                               </div>
+                               </div> -->
                             </div>
                         </div>
                     </div>
