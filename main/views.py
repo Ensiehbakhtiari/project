@@ -36,7 +36,7 @@ def loginview(request):
     else:
         return render(request, 'login.html', {})
 
-
+#"logout انجام میشد ولی برای برداشتن نام کاربر از بالای صفحه ارور داشت و فرصت نبود کامنت کردم "
 # def logoutView(request):
 #     logout(request)
 #     context = {
@@ -104,10 +104,10 @@ def contactview(request):
     return render(request, 'contact.html', context={})
 
 
-def faqview(request):
-    return render(request, 'faq.html', context={})
+# def faqview(request):
+#     return render(request, 'faq.html', context={})
 
-
+#مربوط به قسمت نقل قول دوستان در footer
 def commentsview(request):
 
     if request.method == "POST":

@@ -35,7 +35,7 @@ urlpatterns = [
     path('gallery/', main.views.galleryview),
     path('about/', main.views.aboutview),
     path('contact/', main.views.contactview),
-    path('faq/', main.views.faqview),
+    # path('faq/', main.views.faqview),
 ]
 if settings.DEBUG:
 
