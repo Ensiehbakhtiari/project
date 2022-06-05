@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="fa">
 
@@ -5,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سامانه مدیریت آموزش ضمن خدمت شهرداری کرج</title>
-    <link rel="stylesheet" href="assets/css/site.css">
-    <script data-main="assets/js/gallery.js" src="assets/libs/requirejs/require.js"></script>
+    <link rel="stylesheet" href="{% static 'assets/css/site.css' %}">
+    <script data-main="{% static 'assets/js/gallery.js' %}" src="{% static 'assets/libs/requirejs/require.js' %}"></script>
 </head>
 
 <body id="showoption" class="theme-color-default gallery">
@@ -15,7 +16,7 @@
             <div class="container-fluid">
 
                 <div class="header_topbar__client-area col-md-6 col-sm-6 col-xs-12 pull-right">
-                   <a class="button user-register color-main-bg" href="singup.html">ثبت کاربر جدید <i class="fa fa-user"></i></a>
+                   <a class="button user-register color-main-bg" href="{% static 'singup.html' %}">ثبت کاربر جدید <i class="fa fa-user"></i></a>
                    <div class="user-login-box">
                       <a class="button user-login" href="#">ورود کاربر <i class="fa fa-key"></i></a>
                       <div class="login-form">
@@ -41,12 +42,12 @@
             </div>
         </div>
         <div class="header_banner">
-            <img src="assets/images/header.png" alt=""/>
+            <img src="{% static 'assets/images/header.png' %}" alt=""/>
             <div class="header_banner__content">
                 <div class="container-fluid">
                     <div class="header__title col-md-5 col-sm-12 col-xs-12 pull-right">
                        <h1>
-                          <a href="index.html">
+                          <a href="{% static 'index.html' %}">
                              <span class="title-1">سامانه مدیریت آموزش ضمن خدمت شهرداری کرج</span>
                              <span class="title-2 color-main-bg">Managment System Training Karaj Municipality</span>
                           </a>
@@ -85,31 +86,31 @@
                             <li><a href="index.html">صفحه اصلی</a></li>
                             <li><a href="#">خدمات آموزشی</a>
                                 <ul>
-                                   <li><a href="courses.html">لیست دوره ها</a></li>
-                                   <li><a href="courses-info.html">اطلاعات هر دوره</a></li>
-                                   <li><a href="meetings.html">جلسات</a></li>
+                                   <li><a href="{% static 'courses.html' %}">لیست دوره ها</a></li>
+                                   <li><a href="{% static 'courses-info.html' %}">اطلاعات هر دوره</a></li>
+                                   <li><a href="{% static 'meetings.html' %}">جلسات</a></li>
                                 </ul>
                             </li>
-                            <li><a href="index.html">مقالات</a>
+                            <li><a href="{% static 'index.html' %}">مقالات</a>
                                <ul>
-                                  <li><a href="blog.html">وبلاگ</a></li>
+                                  <li><a href="{% static 'blog.html' %}">وبلاگ</a></li>
                                   <li><a href="#">اخبار</a>
                                      <ul>
-                                      <li><a href="news.html">صفحه اخبار</a></li>
-                                      <li><a href="single.html">صفحه تک خبر</a></li>
+                                      <li><a href="{% static 'news.html' %}">صفحه اخبار</a></li>
+                                      <li><a href="{% static 'single.html' %}">صفحه تک خبر</a></li>
                                    </ul>
                                   </li>
                                </ul>
                             </li>
                             <li><a href="#">گالری تصاویر</a>
                                 <ul>
-                                   <li><a href="gallery-cat.html">لیست گالری ها</a></li>
-                                   <li><a href="gallery.html">صفحه گالری</a></li>
+                                   <li><a href="{% static 'gallery-cat.html' %}">لیست گالری ها</a></li>
+                                   <li><a href="{% static 'gallery.html' %}">صفحه گالری</a></li>
                                 </ul>
                             </li>
-                            <li><a href="about.html">درباره ما</a></li>
-                            <li><a href="contact.html">تماس با ما</a></li>
-                            <li><a href="faq.html">سوالات متداول</a></li>
+                            <li><a href="{% static 'about.html' %}">درباره ما</a></li>
+                            <li><a href="{% static 'contact.html' %}">تماس با ما</a></li>
+                            <li><a href="{% static '' %}">سوالات متداول</a></li>
                         </ul>
                     </div>
                 </div>
@@ -123,13 +124,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>دوره تخصصی مدیریت شبکه</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g4.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g4.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                ویژه مهندسین
@@ -142,13 +143,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>آموزش نرم افزار Auto CAD</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g1.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g1.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                ویژه مهندسین ناظر شهرداری کرج
@@ -161,13 +162,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>همایش عفاف و حجاب</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g2.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g2.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                مراسم جشن اهدای چادر به بانوان شهرداری
@@ -180,13 +181,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>دوره تخصصی مدیریت شبکه</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g4.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g4.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                ویژه مهندسین
@@ -205,7 +206,7 @@
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g1.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g1.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                ویژه مهندسین ناظر شهرداری کرج
@@ -224,7 +225,7 @@
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g2.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g2.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                مراسم جشن اهدای چادر به بانوان شهرداری
@@ -237,13 +238,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>دوره تخصصی مدیریت شبکه</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g4.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g4.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                ویژه مهندسین
@@ -256,13 +257,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>آموزش نرم افزار Auto CAD</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g1.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g1.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                ویژه مهندسین ناظر شهرداری کرج
@@ -275,13 +276,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>همایش عفاف و حجاب</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g2.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g2.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                مراسم جشن اهدای چادر به بانوان شهرداری
@@ -294,13 +295,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>دوره تخصصی مدیریت شبکه</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g4.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g4.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                ویژه مهندسین
@@ -313,13 +314,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>آموزش نرم افزار Auto CAD</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g1.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g1.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                ویژه مهندسین ناظر شهرداری کرج
@@ -332,13 +333,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>همایش عفاف و حجاب</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g2.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g2.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                مراسم جشن اهدای چادر به بانوان شهرداری
@@ -351,13 +352,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>دوره تخصصی مدیریت شبکه</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g4.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g4.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                ویژه مهندسین
@@ -370,13 +371,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>آموزش نرم افزار Auto CAD</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g1.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g1.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                ویژه مهندسین ناظر شهرداری کرج
@@ -389,13 +390,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>همایش عفاف و حجاب</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g2.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g2.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                مراسم جشن اهدای چادر به بانوان شهرداری
@@ -408,13 +409,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>دوره تخصصی مدیریت شبکه</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g4.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g4.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                ویژه مهندسین
@@ -427,13 +428,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static '' %}">
                         <div class="title">
                             <h4>آموزش نرم افزار Auto CAD</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g1.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g1.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                ویژه مهندسین ناظر شهرداری کرج
@@ -446,13 +447,13 @@
 
             <div class="gallery-cat_item col-md-2 col-sm-4 col-xs-12">
                 <div class="gallery-cat_item__content">
-                    <a href="gallery.html">
+                    <a href="{% static 'gallery.html' %}">
                         <div class="title">
                             <h4>همایش عفاف و حجاب</h4>
                         </div>
                         <div class="content">
                             <div class="photo">
-                               <img class="img-responsive" src="assets/images/gallery/g2.jpg" alt="">
+                               <img class="img-responsive" src="{% static 'assets/images/gallery/g2.jpg' %}" alt="">
                             </div>
                             <div class="desc">
                                مراسم جشن اهدای چادر به بانوان شهرداری
@@ -467,12 +468,12 @@
 
         <div class="pagination-base">
           <ul class="pagination">
-            <li><a href="gallery.html">1</a></li>
-            <li><a href="gallery.html">2</a></li>
-            <li><a href="gallery.html">3</a></li>
-            <li><a href="gallery.html">4</a></li>
-            <li><a href="gallery.html">5</a></li>
-            <li><a href="gallery.html">6</a></li>
+            <li><a href="{% static 'gallery.html' %}">1</a></li>
+            <li><a href="{% static 'gallery.html' %}">2</a></li>
+            <li><a href="{% static 'gallery.html' %}">3</a></li>
+            <li><a href="{% static 'gallery.html' %}">4</a></li>
+            <li><a href="{% static 'gallery.html' %}">5</a></li>
+            <li><a href="{% static 'gallery.html' %}">6</a></li>
           </ul>
        </div>
 

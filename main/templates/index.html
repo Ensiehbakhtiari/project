@@ -2,6 +2,7 @@
 {% extends "layout.html" %}
 {% load static %}
 {% block difbody  %}
+
         
         <div class="header_slider hidden-xs hidden-sm">
 
@@ -34,7 +35,7 @@
                                 </a>
                             </div>
                             <div class="sevencol column last">
-                                <img src="{% static 'img/slide_2.png' class="alignnone img-responsive" alt=""/>
+                                <img src="{% static 'img/slide_2.png'}" class="alignnone img-responsive" alt=""/>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -48,7 +49,7 @@
                                     <span class="button pull-left">ادامه مطلب</span>
                                 </a>
                             </div>
-                            <div class="sevencol column last"><img src="{% static 'img/slide_3.png'%}" class="alignnone img-responsive" alt=""/>
+                            <div class="sevencol column last"><img src="{% static 'img/slide_3.png' %}" class="alignnone img-responsive" alt=""/>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -148,7 +149,7 @@
         </div>
     </section>
     <!-- page_3box -->
-
+{% comment %} 
     <section class="page_courses clearfix">
         <div class="container">
             <nav class="page_courses__sidebar col-md-3 col-sm-12 col-xs-12 pull-right">
@@ -279,7 +280,7 @@
                         </div>
                     </div>
                     <!-- box--default -->
-            </nav>
+            </nav> {% endcomment %}
             <!-- page_courses__sidebar -->
             <article class="page_courses__slider col-md-9 col-sm-12 col-xs-12 pull-left">
                 <div class="page_courses__content">
@@ -772,7 +773,11 @@
             </div>
         </div>
     </section>
+
+
 {% endblock %}
+
+
 
     
 
