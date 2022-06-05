@@ -1,5 +1,9 @@
 # from unicodedata import name
 from django.db import models
+from django.db import models
+from django.utils import timezone
+from django.contrib.auth.models import User
+
 
 # Create your models here.
 
@@ -41,3 +45,29 @@ class comments(models.Model):
 
     def __str__(self):
         return f"name:{self.name} , text:{self.text}"
+
+
+
+class news(models.Model):
+    
+    STATUS_CHOICES =('draft', 'Draft'),('published', 'Published')
+
+
+    title = models.CharField(max_length=450)
+    slug = models.SlugField(max_length=350,unique_for_date='publish')
+
+    author = models.ForeignKey(User,on_delete=models.CASCADE,related_name='main_news')
+
+    body = models.TextField()
+    publish = models.DateTimeField(default=timezone.now)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    status = models.CharField(max_length=10,choices=STATUS_CHOICES,default='draft')
+
+    class Meta:
+        ordering = ('-publish',)
+
+    def __str__(self):
+        return self.title
+
